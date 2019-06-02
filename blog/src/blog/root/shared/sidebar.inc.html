@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<x:side xmlns:x="http://www.reizu.org/schema/style"
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <div class="box admin-b">
+        <h3>Administration</h3>
+        <ul>
+            <li>+ <a href="/edit">new article</a></li>
+            <li>+ <a href="/drafts">drafts</a></li>
+            <li>+ <a href="/dbedit">DB Edit</a></li>
+        </ul>
+    </div>
+
+    <div class="box">        
+        {{ad_side_top}}
+    </div>
+    
+    <div class="box">
+        <h3>Latest comments</h3>
+        <ul>
+        {% for comment in latest_comments %}
+            <li><a href="/users/*{{comment.name}}">{{comment.name}}</a> on <a href="/*-{{comment.parent_id}}#comments">{{comment.title}}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Search</h3>
+        {{search}}
+    </div>
+
+    <div class="box">
+        <h3>Categories</h3>
+        <ul>
+        {% for c in categories %}
+        {% if c.name == category_name %}
+            <li>{{c.title}}</li>
+        {% else %}
+            <li><a href="/categories/*{{c.name}}">{{c.title}}</a><br /></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Popular <a href="/tags">tags</a></h3>
+        <ul>
+        {% for tag in top_tags %}
+            <li><a href="/tags/*{{tag.name}}">{{tag.name}}</a> ({{tag.count}})</li>
+        {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="box">
+        <img src="/img/feed.png" style="vertical-align: middle; margin-right: 5px" /> <a href="/index.atom">Atom feed</a>
+    </div>    
+</x:side>

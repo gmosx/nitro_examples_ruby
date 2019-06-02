@@ -1,0 +1,16 @@
+<settings>
+    <db>
+        <database>blog</database>
+        <user>root</user>
+        <password>***</password>    
+    </db>
+    <template>
+        <root>src/blog/root</root>
+    </template>
+    <web.resource>
+        <root>src/blog/root</root>
+    </web.resource>
+    <web.session>
+        <domain>gmosx.com</domain>
+    </web.session>
+</settings>

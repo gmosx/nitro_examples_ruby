@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<form id="article_form" action="/articles" method="POST">
+    <input type="hidden" name="id" value="{{article.id}}" />
+    <p>
+        <label>Title</label>
+        <input type="text" name="title" style="width: 90%" value="{{article.title}}" />
+    </p>
+    <p>
+        <label>Body</label>
+        <textarea id="body" name="body" style="width: 100%; height: 300px">{{article.body}}</textarea>
+    </p>
+    <p>
+        <label>Summary <a href="#" id="toggle-summary">edit</a></label>
+        <textarea id="summary" name="summary" style="display:none; width: 100%; height: 200px">{{article.summary}}</textarea>
+    </p>
+    <p>
+        <label>Category</label>
+        <select name="category_id">
+            {% for c in categories %}
+                {% if c.id == article.category_id %}
+                <option value="{{c.id}}" selected="true">{{c.title}}</option>
+                {% else %}
+                <option value="{{c.id}}">{{c.title}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    </p>
+    <p>
+        <label>Tags</label>
+        <div>
+            <input type="text" id="raw_tagstring" name="raw_tagstring" value="{{tagstring}}" />
+            <div id="raw_tagstring_autocomplete">{{}}</div>
+        </div>
+    </p>
+    <p style="margin-top: 60px">
+        <input type="submit" id="draft-button" name="draft" value="Save as Draft"/> 
+        <input type="submit" id="save-button" name="save" value="Save"/>         
+        or <a href="/">Cancel</a>
+    </p>
+</form>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<div class="article" xmlns:x="http://www.reizu.org/schema/style">
+    <h2><a href="/*{{article.seo_name}}">{{article.title}}</a></h2>
+    <h5>
+        <img src="/img/time.png" /> published by <a href="/users/*{{article.author}}">{{article.author}}</a> at {{article.created_s}} in {{article.category_link}} 
+        <img src="/img/comment.png" /> {{article.comment_count}} comments
+    </h5>
+    <div class="body" id="emoticons">
+        {{article.body}}
+    </div>
+    <div style="text-align: right; margin-bottom: 10px;">
+        <x:diggit />
+    </div>
+    <h5>
+        {% if article.tagstring %}
+        <a href="/tags"><img src="/img/tag.png" /></a> {{article.linked_tagstring}} &#160;
+        {% endif %}
+        <span class="admin-i">
+            <img src="/img/page_edit.png" /> <a href="/edit?id={{article.id}}">update</a> &#160;
+            <img src="/img/page_edit.png" /> <a href="/dbedit/object?id={{article.id}}&amp;class=Article">edit</a> &#160;
+            <img src="/img/delete.png" /> <a href="/id?id={{article.id}}&amp;_method=DELETE" onclick="return confirm('Are you sure?');">delete</a>
+        </span>
+    </h5>
+</div>

@@ -1,0 +1,242 @@
+body {
+    background: #eee;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input, textarea {
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 146.5%;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 123.1%;
+    margin-bottom: 10px;
+}
+
+h1 img, h2 img, h3 img, h4 img, h5 img {
+    vertical-align: middle;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+form p {
+    margin-bottom: 10px;
+}
+
+#doc {
+}
+
+#hd {
+    text-align: center;
+  	background: #fff;
+  	padding-top: 10px;
+  	border-left: 1px solid #ddd;
+  	border-right: 1px solid #ddd;
+}
+
+#hd a:link, #hd a:visited {
+  	color: #fff;
+	text-decoration: none;
+}
+
+#hd a:hover {
+	  text-decoration: underline;
+}
+
+#hd #header {
+  	background: #3371a3;
+  	color: #fff;
+  	margin-top: 10px; 
+  	padding: 50px;
+}
+
+#top-menu {
+    padding: 0px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+#top-menu #breadcrumbs {
+    float: left;
+    padding: 10px;
+}
+
+#top-menu #user-menu {
+    float: right;
+    padding: 10px 10px 10px 10px;
+}
+
+#top-menu #user-menu img {
+    vertical-align: middle;
+}
+
+#header h1 {
+  	font-size: 197%;
+}
+
+#header h2 {
+	font-size: 108%;
+	margin-bottom: 0px;
+}
+
+#bd {
+  	background: #fff;
+  	border: 1px solid #ddd;
+  	border-top: none;
+  	padding: 10px;
+  	overflow: hidden;
+}
+
+#ft {
+    color: #aaa;
+  	font-size: 85%;
+  	padding-top: 20px;
+  	padding-bottom: 220px;
+  	text-align: center;
+}
+
+#ft a:link, #ft a:visited {
+    color: #888;
+}
+
+#ft a:hover {
+    color: #00f;
+}
+
+#side {
+    overflow: hidden;    
+}
+
+#side .box {
+    margin-bottom: 20px;
+    overflow: hidden;    
+}
+
+#side .box h5 {
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.article {
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.article h2 {
+    font-size: 153.9%;
+    margin-bottom: 3px;
+}
+
+.article h5 {
+    color: #ccc;
+    font-size: 77%;
+    margin-bottom: 10px;
+}
+
+.article .body {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.comment {
+    background: #eee;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.comment h3 {
+    font: "Trebuchet MS"
+    font-size: 100%;
+}
+
+.pager {
+    clear: both;
+    margin-top: 20px;
+}
+
+.pager .prev {
+    float :right;
+}
+
+.pager .next {
+    float :left;
+}
+
+.error {
+    color: #f00;
+}
+
+.admin-i, .admin-b {
+    display: none;
+}
+
+.tagcloud {
+    text-align: center;
+}
+
+.tagcloud span {
+    padding: 10px;
+}
+
+.clear {
+    display: inline;
+    height: 0px;
+    clear: both;
+}
+
+.user-icon {
+    float: left; 
+    padding: 20px;
+    text-align: center;
+}
+
+table.dbedit-data {
+    width: 100%;
+    border: 1px solid #999;
+    border-collapse: collapse;
+}
+
+table.dbedit-data td, table.dbedit-data th {
+    border: 1px solid #999;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+table.dbedit-data tr:hover {
+    background: #ffc;
+}
+
+table.dbedit-data td img {
+    vertical-align: middle;
+}
+
+table.dbedit-data th {
+    background: #eee;
+    text-align: center;
+}
+
+table.dbedit-data .description {
+    width: 100%;
+}
+
+.dbedit textarea {
+    width: 100%;
+    height: 300px;
+}
+
+.captcha {
+    display: none;
+}
+

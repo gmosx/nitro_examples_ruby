@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:doc xmlns:x="http://www.reizu.org/schema/style"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<x:breadcrumbs>
+    <a href="/">Home</a> / {{article.category_link}} / {{article.title}}
+</x:breadcrumbs>
+
+<xi:include href="article/content.inc.html" />
+
+<h3><img src="/img/comments.png" /> {{article.comment_count}} Comments</h3>
+
+<div id="comments">
+{% for c in comments %}
+<xi:include href="comment.inc.html" />
+{% endfor %}
+</div>
+
+<h3 id="add_comment" style="margin-top: 20px"><img src="/img/comment_add.png" /> Add your comment</h3>
+
+<form id="comment_form" action="/comments" method="POST">
+    <input type="hidden" name="parent_id" value="{{article.id}}" />
+    <p>
+        <textarea id="comment_body" style="width: 100%; height: 100px">{{}}</textarea>
+        <!--
+        <div id="resize_comment_body" style="width: 500px; height: 100px">
+            <textarea id="comment_body" style="width: 100%; height: 100%">{{}}</textarea>
+        </div>
+        -->
+    </p>
+    <p id="captcha" style="display: none">
+        <script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LdY_gIAAAAAAG8dlujBNSyKTw09KA0hRQljcHaB">{{}}</script>
+    </p>
+    <p style="margin-top: 10px">
+        <input type="submit" id="comment_submit" value="Send" />
+    </p>
+</form>
+
+</x:doc>

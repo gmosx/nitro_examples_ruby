@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<x:doc xmlns:x="http://www.reizu.org/schema/style"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<x:breadcrumbs>
+    <a href="/">Home</a> / <a href="/users">Users</a> / sign in
+</x:breadcrumbs>
+
+<h2 style="margin-bottom: 20px">Sign in and participate</h2>
+
+<p>
+Become a member of this site to leave your own comments, save your favourite
+articles and participate in the community.
+</p>
+
+{% if error %}
+<div class="error" style="margin-top: 20px">{{error}}</div>
+{% endif %}
+
+<form style="margin-top: 20px; margin-bottom: 80px" action="/users/openid/begin" method="POST">
+    <p>
+        <label>Your <a href="#what-is-openid">OpenID</a></label>
+        <input type="text" name="openid_identifier" style="width: 300px; background: url('/img/openid.gif') 2px 4px no-repeat; padding-left: 22px" value="{{openid_identifier}}" />
+    </p>
+    <p>        
+        <input type="submit" value="Sign in" /> or go to <a href="http://www.myopenid.com" target="_blank">www.myopenid.com</a> and
+        <a href="http://www.myopenid.com" target="_blank">get a free OpenID</a> 
+    </p>
+</form>
+
+<h3 id="what-is-openid">What is OpenId?</h3>
+<p>
+    OpenID is a shared identity service, which allows Internet users to log on to many different web sites using a single digital identity, single sign-on, eliminating the need for a different user name and password for each site. OpenID is a decentralized, free and open standard that lets users control the amount of personal information they provide.
+</p>
+<p>
+    An OpenID is in the form of a URL. This URL can be the domain name of your own website, or the URL of an OpenID Identity Provider. When you log in with an OpenID, you have to log in to the Identity Provider for validation.
+</p>
+<p>
+    Using OpenID-enabled sites, web users do not need to remember traditional items of identity such as username and password. Instead, they only need to be registered with any OpenID "identity provider" (IdP). Since OpenID is decentralized, any website can use OpenID as a way for users to sign in; OpenID does not require a centralized authority to confirm a user's digital identity.
+</p>
+
+<h3 style="margin-top: 40px">I don't have an OpenID</h3>
+<p>
+    You can get an OpenID for free:
+    <ul>
+        <li><a href="http://www.myopenid.com">www.myopenid.com</a></li>
+    </ul>
+</p>
+
+
+</x:doc>

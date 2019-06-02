@@ -1,0 +1,11 @@
+<div class="comment">
+    <img src="{{c.gravatar_uri}}" align="right" />
+    <h3>{{c.name}} at {{c.created_s}}</h3>
+    {{c.body}}
+    <p style="clear: right" />
+    <h5>
+        <img src="/img/page_edit.png" /> <a href="/dbedit/object?id={{c.id}};class=Comment">edit</a> &#160;
+        <img src="/img/delete.png" /> <a href="/comments/*{{c.id}}?_method=DELETE" onclick="return confirm('Are you sure?');">delete</a>
+    </h5>
+</div>
+

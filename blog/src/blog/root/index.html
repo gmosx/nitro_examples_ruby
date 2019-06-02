@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<x:doc xmlns:x="http://www.reizu.org/schema/style"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<x:breadcrumbs>
+    Home 
+</x:breadcrumbs>
+
+{% for article in articles %}
+<xi:include href="article/summary.inc.html" />
+{% endfor %}
+
+<xi:include href="shared/pager.inc.html" />
+
+<xi:include href="shared/sidebar.inc.html" />
+
+</x:doc>
